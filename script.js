@@ -13,6 +13,12 @@ function deleteChar() {
 }
 
 function calculate() {
-    let result = eval(display.innerText);
+    let result;
+    try {
+        result = eval(display.innerText);
+    }
+    catch {
+        result = "error"
+    }
     display.innerText = result;
 }
